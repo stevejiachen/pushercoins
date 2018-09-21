@@ -2,6 +2,8 @@
 
 #webstrom
 /.idea
+.idea/workspace.xml
+
 
 # dependencies
 /node_modules
