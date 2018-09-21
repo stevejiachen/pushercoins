@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 app.set('port', (5000))
 
 app.get('/', (req, res) => {
-    res.send('Welcome')
+    res.sendFile(__dirname + '/build/index.html')
 })
 
 app.post('/prices/new', (req, res) => {
