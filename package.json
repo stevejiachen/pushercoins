@@ -1,31 +1,35 @@
 {
+  "homepage": "http://stevejiachen.github.io/pushercoins",
   "name": "pushercoins",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3",
-    "moment": "^2.18.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "moment": "^2.22.2",
     "npm-run-all": "^4.1.1",
     "pusher": "^1.5.1",
     "pusher-js": "^4.1.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
+    "react-scripts": "^1.1.5"
   },
   "scripts": {
     "start:client": "react-scripts start",
     "start:server": "nodemon server.js",
     "start": "npm-run-all --parallel start:*",
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:5000",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "server.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^2.0.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"

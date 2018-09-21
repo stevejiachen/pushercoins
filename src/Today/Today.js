@@ -49,8 +49,8 @@ class Today extends Component {
 		if (!navigator.onLine) {
 			return this.restoreStateFromLocalStorage();
 		}
-		this.pusher = new Pusher('APP_KEY', {
-			cluster: 'YOUR_CLUSTER',
+		this.pusher = new Pusher('43001b7b4adc589ad3a4', {
+			cluster: 'ap1',
 			encrypted: true
 		});
 		this.prices = this.pusher.subscribe('coin-prices');
@@ -78,9 +78,9 @@ class Today extends Component {
 		}, 10000);
 		this.prices.bind('prices', ({prices: {BTC, ETH, LTC}}) => {
 			this.setState({
-				btcprice: BTC.usd,
-				ethprice: ETH.usd,
-				ltcprice: LTC.usd
+				btcprice: BTC.USD,
+				ethprice: ETH.USD,
+				ltcprice: LTC.USD
 			}, this.saveStateToLocalStorage);
 		}, this);
 	}
